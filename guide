@@ -1,0 +1,21 @@
+Требования к серверу:
+4/8/200 
+ВИДЕО-ГАЙД ТУТ
+Дополнительно необходимо:
+аккаунт Warpcast (скачиваем на телефон и регистрируемся)
+аккаунт на Infura (регистрируемся, создаем апи кей, нам необходимы рпс Ethereum Mainnet / Optimism Mainnet)
+Устанока ноды:
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install curl
+curl -sSL https://download.thehubble.xyz/bootstrap.sh | bash
+#отвечаем на вопросы (1/2 - вставляем ссылки с инфуры)
+#3й - FID или никнейм с Warpcast
+Проверка логов:
+docker container ls
+#находим контейнер farcasterxyz/hubble:latest и запоминаем его ID
+
+docker container logs <ID>
+#заменить <ID>
+Мониторить ноду можно также через графану, для этого в браузере напишите IP:3000 (заменить тут на значение айпи сервера)
+Обновление
+cd ~/hubble && ./hubble.sh upgrade
